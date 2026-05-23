@@ -58,7 +58,7 @@ export function Navbar() {
             <Code2 className="w-4 h-4 text-white" />
           </div>
           <span className="font-display font-700 text-sm tracking-tight">
-            alexrahman<span className="gradient-text">.dev</span>
+            raselcse<span className="gradient-text">.dev</span>
           </span>
         </Link>
 
