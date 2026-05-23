@@ -1,14 +1,14 @@
 import { Project, Skill, Experience, Service, Testimonial } from "@/types";
 
 export const PERSONAL_INFO = {
-  name: "Alex Rahman",
+  name: "Md. Rasel Aktar",
   title: "Full Stack JavaScript Developer",
   tagline: "Building Scalable Web Experiences",
   bio: "3+ years crafting high-performance web applications with Next.js, Node.js, and modern JavaScript. I specialize in end-to-end product development — from elegant frontends to robust backend APIs.",
-  email: "alex.rahman.dev@gmail.com",
+  email: "raselcse.dev@gmail.com",
   location: "Remote / Worldwide",
-  github: "https://github.com/alexrahman",
-  linkedin: "https://linkedin.com/in/alexrahman",
+  github: "https://github.com/raselcsedev",
+  linkedin: "https://bd.linkedin.com/in/md-rasel-1a9957174",
   resumeUrl: "/resume.pdf",
 };
 
