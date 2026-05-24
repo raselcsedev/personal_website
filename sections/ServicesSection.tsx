@@ -9,7 +9,7 @@ import {
   ShoppingCart,
   Zap,
 } from "lucide-react";
-import { SERVICES } from "@/constants/demo_data";
+import { SERVICES } from "@/constants/data";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
-import { EXPERIENCE } from "@/constants/demo_data";
+import { EXPERIENCE } from "@/constants/data";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export function ExperienceSection() {

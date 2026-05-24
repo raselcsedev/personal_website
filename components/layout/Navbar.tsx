@@ -8,7 +8,7 @@ import { Sun, Moon, Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMounted } from "@/hooks/useMounted";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
-import { NAV_LINKS } from "@/constants/demo_data";
+import { NAV_LINKS } from "@/constants/data";
 import { cn } from "@/lib/utils";
 
 const SECTION_IDS = [

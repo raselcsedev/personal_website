@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import { TESTIMONIALS } from "@/constants/demo_data";
+import { TESTIMONIALS } from "@/constants/data";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import type { TestimonialCardProps } from "@/types";
 

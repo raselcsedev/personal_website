@@ -6,7 +6,7 @@ import { ArrowDown, Github, Linkedin, Download, ChevronRight } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { HeroBackground } from "@/components/shared/HeroBackground";
 import { containerVariants, fadeUpVariants } from "@/lib/animations";
-import { PERSONAL_INFO } from "@/constants/demo_data";
+import { PERSONAL_INFO } from "@/constants/data";
 
 const ROTATING_WORDS = [
   "Next.js Apps",

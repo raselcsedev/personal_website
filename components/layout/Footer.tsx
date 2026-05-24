@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, Code2 } from "lucide-react";
-import { NAV_LINKS, PERSONAL_INFO } from "@/constants/demo_data";
+import { NAV_LINKS, PERSONAL_INFO } from "@/constants/data";
 
 /** Site footer with quick navigation and social links */
 export function Footer() {

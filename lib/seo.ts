@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PERSONAL_INFO } from "@/constants/demo_data";
+import { PERSONAL_INFO } from "@/constants/data";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://alexrahman.dev";
 
