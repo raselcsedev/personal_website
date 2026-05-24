@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { PROJECTS } from "@/constants/data";
+import { PROJECTS } from "@/constants/demo_data";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";

@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { PERSONAL_INFO } from "@/constants/data";
+import { PERSONAL_INFO } from "@/constants/demo_data";
 import type { ContactFormData } from "@/types";
 
 const contactSchema = z.object({

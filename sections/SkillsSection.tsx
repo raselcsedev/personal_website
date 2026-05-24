@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SKILLS } from "@/constants/data";
+import { SKILLS } from "@/constants/demo_data";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export function SkillsSection() {
