@@ -128,8 +128,8 @@ export const EXPERIENCE: Experience[] = [
   {
     id: "1",
     company: "TechFlow Solutions",
-    role: "Senior Full Stack Developer",
-    duration: "Jan 2023 – Present",
+    role: "Frontend Developer",
+    duration: "Nov 2023 – Present",
     description:
       "Lead frontend architecture for 3 SaaS products. Built reusable component systems, optimized Core Web Vitals by 40%, and mentored 2 junior developers.",
     tech: ["Next.js", "TypeScript", "Node.js", "MongoDB", "AWS"],

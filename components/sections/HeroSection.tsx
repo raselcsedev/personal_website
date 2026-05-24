@@ -88,7 +88,7 @@ export function HeroSection() {
           </motion.div>
 
           <motion.div variants={fadeUpVariants}>
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-800 leading-[1.05] tracking-tight mb-4">
+            <h1 className="font-display text-base sm:text-xl md:text-3xl font-800 leading-[1.05] tracking-tight mb-4">
               <span className="text-[rgb(var(--text-primary))]">I build </span>
               <span className="gradient-text">
                 {displayText}
