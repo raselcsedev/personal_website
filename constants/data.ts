@@ -135,6 +135,27 @@ export const PROJECTS: Project[] = [
     category: "frontend",
     featured: false,
   },
+  {
+  id: "6",
+  title: "Our Car Rental — Online Car Booking Platform",
+  description:
+    "A streamlined online car rental platform with interactive free map location picking, Stripe payment integration, and SMTP email notifications. Users can browse available cars, select pickup locations on the map, complete bookings, and receive confirmation emails — ideal for individuals and teams looking for an efficient way to rent and pay online.",
+  image: "/projects/car-rental.jpg",
+  tech: [
+    "Next.js",
+    "MongoDB",
+    "Mongoose",
+    "Stripe",
+    "SMTP",
+    "ShadCN UI",
+    "Tailwind CSS",
+    "Free Map Location",
+  ],
+  github: "https://github.com/raselcsedev/our-car-rental",
+  live: "https://our-car-rental.example.com",
+  category: "fullstack",
+  featured: true,
+},
 ];
 
 export const EXPERIENCE: Experience[] = [
