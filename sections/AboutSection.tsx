@@ -35,7 +35,7 @@ export function AboutSection() {
                     <Code2 className="w-10 h-10 text-white" />
                   </div>
                   <p className="font-display font-700 text-2xl gradient-text">AR</p>
-                  <p className="text-xs text-[rgb(var(--text-muted))] mt-1">Full Stack Developer</p>
+                  <p className="text-xs text-[rgb(var(--text-muted))] mt-1">Frontend Developer</p>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-[rgb(var(--accent)/0.06)] to-[rgb(var(--accent-2)/0.06)]" />
               </div>
@@ -66,9 +66,9 @@ export function AboutSection() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-6">
-              I&apos;m a <strong className="text-[rgb(var(--text-primary))]">Full Stack JavaScript Developer</strong> with
+              I&apos;m a <strong className="text-[rgb(var(--text-primary))]">Frontend Developer</strong> with
               3+ years of professional experience building web applications that scale. My core stack is{" "}
-              <strong className="text-[rgb(var(--text-primary))]">Next.js + Node.js + MongoDB</strong>, and I&apos;ve
+              <strong className="text-[rgb(var(--text-primary))]">Next.js + React.js + Angular + Tailwind CSS</strong>, and I&apos;ve
               shipped everything from SPAs to multi-vendor SaaS platforms.
             </p>
             <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-8">

@@ -14,7 +14,7 @@ export function SkillsSection() {
           subtitle="Technologies I use daily to build robust, scalable web applications."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {SKILLS.map((skillGroup, gi) => (
             <motion.div
               key={skillGroup.category}

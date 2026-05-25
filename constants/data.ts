@@ -29,13 +29,27 @@ export const SKILLS: Skill[] = [
   {
     category: "UI & Styling",
     items: [
-      { name: "CSS3", level: 92, icon: "🎨" },
       { name: "HTML5", level: 95, icon: "📄" },
+      { name: "CSS3", level: 92, icon: "🎨" },
+      { name: "Tailwind CSS", level: 94, icon: "💨" },
+      { name: "Shadcn/UI", level: 90, icon: "🧩" },
       { name: "SASS", level: 85, icon: "🎛️" },
       { name: "Bootstrap", level: 82, icon: "🅱️" },
       { name: "Aceternity UI", level: 80, icon: "✨" },
     ],
   },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", level: 88, icon: "🟢" },
+      { name: "Express.js", level: 87, icon: "🚀" },
+      { name: "MongoDB", level: 85, icon: "🍃" },
+      { name: "REST APIs", level: 92, icon: "🔌" },
+      { name: "Authentication", level: 88, icon: "🔒" },
+      { name: "Payment Gateway", level: 82, icon: "💳" },
+    ],
+  },
+
   {
     category: "Tools",
     items: [
@@ -51,6 +65,30 @@ export const SKILLS: Skill[] = [
 export const PROJECTS: Project[] = [
   {
     id: "1",
+    title: "RetailPOS — Full-Stack Point of Sale System",
+    description:
+      "A modern full-stack POS and inventory management system built with Next.js 16, TypeScript, MongoDB, Tailwind CSS, NextAuth, Zustand, and TanStack Table. Includes role-based authentication, sales dashboard, barcode scanning, thermal receipt printing, inventory tracking, reporting, and offline-ready PWA support.",
+    image: "/projects/retail-pos.jpg",
+    tech: [
+      "Next.js 16",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "Tailwind CSS",
+      "NextAuth",
+      "Zustand",
+      "React Hook Form",
+      "Zod",
+      "TanStack Table",
+      "Recharts",
+    ],
+    github: "https://github.com/raselcsedev/retail-pos",
+    live: "https://retailpos.example.com",
+    category: "fullstack",
+    featured: true,
+  },
+  {
+    id: "2",
     title: "Mohona Tours and Travels",
     description:
       "A responsive travel agency website built with React and Tailwind CSS. Includes featured packages, travel destinations, and a travel blog for tips and recommendations.",
@@ -62,7 +100,7 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "2",
+    id: "3",
     title: "Easy Life Shopping",
     description:
       "An e-commerce shopping website with dynamic category-based filtering, responsive UI components, and advanced product navigation for a seamless customer experience.",
@@ -74,7 +112,7 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "3",
+    id: "4",
     title: "Music Master",
     description:
       "A responsive music application frontend template developed with Next.js, TypeScript, and Aceternity UI for a polished, user-friendly listening experience.",
@@ -86,7 +124,7 @@ export const PROJECTS: Project[] = [
     featured: false,
   },
   {
-    id: "4",
+    id: "5",
     title: "Innovative Gadgets",
     description:
       "An e-commerce website template built with React and Redux Toolkit, focusing on responsive design, type safety, and reusable UI components.",
@@ -107,7 +145,16 @@ export const EXPERIENCE: Experience[] = [
     duration: "Nov 2023 – Present",
     description:
       "Developing Bizpost AI, an AI-powered social media content generation platform with optimized templates for Facebook, TikTok, and LinkedIn. Working on Retails Master, a customizable single-vendor e-commerce platform, and maintaining Quick eCommerce, a large-scale multivendor platform with admin and seller dashboards. Also built responsive ERP dashboards using React.js, Bootstrap, and SCSS with performance optimizations via TanStack Query, code splitting, lazy loading, memoization, React Hook Form, and Zod.",
-    tech: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "ShadCN UI", "React Hook Form", "Zod", "TanStack Query"],
+    tech: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "React Hook Form",
+      "Zod",
+      "TanStack Query",
+    ],
     type: "full-time",
   },
   {
