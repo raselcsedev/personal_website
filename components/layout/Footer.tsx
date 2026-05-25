@@ -17,12 +17,12 @@ export function Footer() {
                 <Code2 className="w-4 h-4 text-white" />
               </div>
               <span className="font-display font-700 text-sm">
-                alexrahman<span className="gradient-text">.dev</span>
+                raselcse<span className="gradient-text">.dev</span>
               </span>
             </Link>
             <p className="text-sm text-[rgb(var(--text-secondary))] leading-relaxed max-w-xs">
-              Full Stack JavaScript Developer building scalable web experiences
-              with Next.js, React, and Node.js.
+              Frontend Developer building scalable web experiences
+              with Next.js, React.js, and Tailwind CSS.
             </p>
           </div>
 

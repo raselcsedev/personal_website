@@ -220,7 +220,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Sarah Mitchell",
     role: "CTO, RetailEdge",
     content:
-      "Alex delivered our e-commerce platform 2 weeks early with zero critical bugs. The code quality was exceptional — clean, well-documented, and easy for our team to maintain.",
+      "Rasel delivered our e-commerce platform 2 weeks early with zero critical bugs. The code quality was exceptional — clean, well-documented, and easy for our team to maintain.",
     avatar: "/avatars/sarah.jpg",
     rating: 5,
   },
