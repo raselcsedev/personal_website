@@ -143,8 +143,12 @@ export const EXPERIENCE: Experience[] = [
     company: "Digital Intelligence System Ltd.",
     role: "Frontend Developer",
     duration: "Nov 2023 – Present",
-    description:
-      "Developing Bizpost AI, an AI-powered social media content generation platform with optimized templates for Facebook, TikTok, and LinkedIn. Working on Retails Master, a customizable single-vendor e-commerce platform, and maintaining Quick eCommerce, a large-scale multivendor platform with admin and seller dashboards. Also built responsive ERP dashboards using React.js, Bootstrap, and SCSS with performance optimizations via TanStack Query, code splitting, lazy loading, memoization, React Hook Form, and Zod.",
+    description: [
+      "Developing Retails Master — a fully customizable single-vendor e-commerce platform with multi-language, multi-theme support, AI-powered product description generation, product management, order tracking, and integrated payment gateways including Stripe, bKash, Nagad, and SSLCommerz.",
+      "Building Bizpost AI — an AI-powered social media content generation platform supporting multi-language and multi-theme, with AI-driven video generation, image generation, and content generation, featuring optimized templates for Facebook, TikTok, and LinkedIn to help users create and schedule posts efficiently.",
+      "Maintaining Quick eCommerce — a large-scale multivendor platform with multi-language, multi-theme support, AI-powered product description generation, dedicated admin and seller dashboards, real-time live chat via Pusher, push notifications with Firebase, and multi-payment gateway support including Stripe, bKash, Nagad, and SSLCommerz.",
+      "Built responsive ERP dashboards with React.js, Angular, Bootstrap, Tailwind CSS, and SCSS featuring complex data tables, dynamic charts, and role-based access control — optimized with TanStack Query, code splitting, lazy loading, memoization, React Hook Form, and Zod.",
+    ],
     tech: [
       "Next.js",
       "React.js",
@@ -154,6 +158,13 @@ export const EXPERIENCE: Experience[] = [
       "React Hook Form",
       "Zod",
       "TanStack Query",
+      "Angular",
+      "Stripe",
+      "bKash",
+      "Nagad",
+      "SSLCommerz",
+      "Pusher",
+      "Firebase",
     ],
     type: "full-time",
   },
@@ -162,9 +173,20 @@ export const EXPERIENCE: Experience[] = [
     company: "Gain Solutions Ltd.",
     role: "JavaScript Developer",
     duration: "Sep 2022 – Oct 2023",
-    description:
-      "Developed key features for the House Rental Management System (Unite Living) using React.js, GraphQL, and Apollo Client. Implemented efficient CRUD operations with GraphQL APIs and delivered scalable UI components in an Agile environment.",
-    tech: ["React.js", "GraphQL", "Apollo Client", "REST APIs", "CSS3"],
+    description: [
+      "Developed key features for the House Rental Management System (Unite Living) using React.js, GraphQL, and Apollo Client.",
+      "Implemented efficient CRUD operations with GraphQL APIs.",
+      "Delivered scalable UI components in an Agile environment.",
+    ],
+    tech: [
+      "React.js",
+      "GraphQL",
+      "Apollo Client",
+      "REST APIs",
+      "CSS3",
+      "SASS",
+      "Bootstrap",
+    ],
     type: "full-time",
   },
 ];

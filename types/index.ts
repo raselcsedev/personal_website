@@ -23,15 +23,15 @@ export interface Project {
   featured: boolean;
 }
 
-export interface Experience {
+export type Experience = {
   id: string;
   company: string;
   role: string;
   duration: string;
-  description: string;
+  description: string[];
   tech: string[];
-  type: "full-time" | "freelance" | "contract";
-}
+  type: "full-time" | "part-time" | "freelance" | "contract";
+};
 
 export interface Service {
   id: string;

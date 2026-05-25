@@ -37,7 +37,9 @@ export function ExperienceSection() {
                       <h3 className="font-display text-lg font-600 text-[rgb(var(--text-primary))]">
                         {exp.role}
                       </h3>
-                      <p className="text-sm font-500 gradient-text">{exp.company}</p>
+                      <p className="text-sm font-500 gradient-text">
+                        {exp.company}
+                      </p>
                     </div>
                     <div className="text-right">
                       <span className="flex items-center gap-1.5 text-xs text-[rgb(var(--text-muted))]">
@@ -54,9 +56,19 @@ export function ExperienceSection() {
                       </span>
                     </div>
                   </div>
-                  <p className="text-sm text-[rgb(var(--text-secondary))] leading-relaxed mb-4">
-                    {exp.description}
-                  </p>
+
+                  <ul className="space-y-1.5 mb-4 list-none">
+                    {exp.description.map((point, j) => (
+                      <li
+                        key={j}
+                        className="flex items-start gap-2 text-sm text-[rgb(var(--text-secondary))] leading-relaxed"
+                      >
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[rgb(var(--text-muted))] shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+
                   <div className="flex flex-wrap gap-1.5">
                     {exp.tech.map((t) => (
                       <span key={t} className="tech-badge">
