@@ -130,8 +130,9 @@ export const EXPERIENCE: Experience[] = [
     company: "TechFlow Solutions",
     role: "Frontend Developer",
     duration: "Nov 2023 – Present",
-    description:
+    description: [
       "Lead frontend architecture for 3 SaaS products. Built reusable component systems, optimized Core Web Vitals by 40%, and mentored 2 junior developers.",
+    ],
     tech: ["Next.js", "TypeScript", "Node.js", "MongoDB", "AWS"],
     type: "full-time",
   },
@@ -140,8 +141,9 @@ export const EXPERIENCE: Experience[] = [
     company: "DigitalCraft Agency",
     role: "Full Stack JavaScript Developer",
     duration: "Jul 2021 – Dec 2022",
-    description:
+    description: [
       "Delivered 12+ client projects including e-commerce platforms, admin dashboards, and REST APIs. Integrated Stripe, PayPal, and SSLCommerz payment gateways.",
+    ],
     tech: ["React.js", "Express.js", "MongoDB", "Stripe", "Redux"],
     type: "full-time",
   },
@@ -150,8 +152,9 @@ export const EXPERIENCE: Experience[] = [
     company: "FreelanceStack",
     role: "Freelance Web Developer",
     duration: "Jan 2021 – Jul 2021",
-    description:
+    description: [
       "Built custom web applications for 8 clients across retail, education, and healthcare. Specialized in Angular frontends with RESTful Node.js backends.",
+    ],
     tech: ["Angular", "Node.js", "MongoDB", "REST APIs"],
     type: "freelance",
   },
