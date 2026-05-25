@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Download, ChevronRight } from "lucide-react";
+import {
+  ArrowDown,
+  Github,
+  Linkedin,
+  Download,
+  ChevronRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroBackground } from "@/components/shared/HeroBackground";
 import { containerVariants, fadeUpVariants } from "@/lib/animations";
@@ -54,18 +60,20 @@ export function HeroSection() {
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 0.45, x: 0 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute right-8 top-1/3 hidden xl:block font-mono text-xs leading-relaxed text-[rgb(var(--text-muted))] card-glass p-4 float-animation z-10"
+        className="absolute right-8 top-1/3 hidden xl:block shadow-xl font-mono text-xs leading-relaxed text-[rgb(var(--text-muted))] card-glass p-4 float-animation z-10"
         aria-hidden
       >
         <div className="text-[rgb(var(--accent))]">const</div>
         <div>
-          <span className="text-[rgb(var(--accent-2))]"> developer</span> = {"{"}
+          <span className="text-[rgb(var(--accent-2))]"> developer</span> ={" "}
+          {"{"}
         </div>
         <div className="pl-4">
-          name: <span className="text-green-400/70">&apos;Alex&apos;</span>,
+          name: <span className="text-green-400/70">&apos;Rasel&apos;</span>,
         </div>
         <div className="pl-4">
-          stack: <span className="text-yellow-400/70">[&apos;Next.js&apos;, ...]</span>
+          stack:{" "}
+          <span className="text-yellow-400/70">[&apos;Next.js&apos;, ...]</span>
         </div>
         <div className="pl-4">
           available: <span className="text-[rgb(var(--accent))]">true</span>
@@ -92,7 +100,9 @@ export function HeroSection() {
               <span className="text-[rgb(var(--text-primary))]">I build </span>
               <span className="gradient-text">
                 {displayText}
-                <span className="animate-pulse" aria-hidden>|</span>
+                <span className="animate-pulse" aria-hidden>
+                  |
+                </span>
               </span>
             </h1>
           </motion.div>
@@ -114,7 +124,10 @@ export function HeroSection() {
             {PERSONAL_INFO.bio}
           </motion.p>
 
-          <motion.div variants={fadeUpVariants} className="flex flex-wrap gap-3 mb-12">
+          <motion.div
+            variants={fadeUpVariants}
+            className="flex flex-wrap gap-3 mb-12"
+          >
             <Button asChild>
               <a href="#contact">
                 Hire Me <ChevronRight className="w-4 h-4" />
@@ -130,20 +143,30 @@ export function HeroSection() {
             </Button>
           </motion.div>
 
-          <motion.div variants={fadeUpVariants} className="flex flex-wrap gap-8 mb-12">
+          <motion.div
+            variants={fadeUpVariants}
+            className="flex flex-wrap gap-8 mb-12"
+          >
             {[
               { num: "3+", label: "Years Experience" },
               { num: "20+", label: "Projects Shipped" },
               { num: "15+", label: "Happy Clients" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="font-display text-3xl font-700 gradient-text">{stat.num}</p>
-                <p className="text-sm text-[rgb(var(--text-muted))]">{stat.label}</p>
+                <p className="font-display text-3xl font-700 gradient-text">
+                  {stat.num}
+                </p>
+                <p className="text-sm text-[rgb(var(--text-muted))]">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </motion.div>
 
-          <motion.div variants={fadeUpVariants} className="flex items-center gap-4">
+          <motion.div
+            variants={fadeUpVariants}
+            className="flex items-center gap-4"
+          >
             <a
               href={PERSONAL_INFO.github}
               target="_blank"
@@ -163,7 +186,9 @@ export function HeroSection() {
               <Linkedin className="w-5 h-5" />
             </a>
             <span className="w-12 h-px bg-[rgb(var(--border))]" />
-            <span className="text-xs text-[rgb(var(--text-muted))]">{PERSONAL_INFO.email}</span>
+            <span className="text-xs text-[rgb(var(--text-muted))]">
+              {PERSONAL_INFO.email}
+            </span>
           </motion.div>
         </motion.div>
 

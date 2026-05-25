@@ -5,7 +5,14 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Send, Github, Linkedin, Mail, MapPin, CheckCircle2 } from "lucide-react";
+import {
+  Send,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  CheckCircle2,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -63,15 +70,23 @@ export function ContactSection() {
             <div className="space-y-5">
               {[
                 { icon: Mail, label: "Email", value: PERSONAL_INFO.email },
-                { icon: MapPin, label: "Location", value: PERSONAL_INFO.location },
+                {
+                  icon: MapPin,
+                  label: "Location",
+                  value: PERSONAL_INFO.location,
+                },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl accent-bg flex items-center justify-center shrink-0">
                     <Icon className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="text-xs text-[rgb(var(--text-muted))] mb-0.5">{label}</p>
-                    <p className="text-sm text-[rgb(var(--text-primary))]">{value}</p>
+                    <p className="text-xs text-[rgb(var(--text-muted))] mb-0.5">
+                      {label}
+                    </p>
+                    <p className="text-sm text-[rgb(var(--text-primary))]">
+                      {value}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -83,12 +98,20 @@ export function ContactSection() {
               </p>
               <div className="flex gap-3">
                 <Button variant="outline" size="sm" asChild>
-                  <a href={PERSONAL_INFO.github} target="_blank" rel="noreferrer">
+                  <a
+                    href={PERSONAL_INFO.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Github className="w-4 h-4" /> GitHub
                   </a>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noreferrer">
+                  <a
+                    href={PERSONAL_INFO.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Linkedin className="w-4 h-4" /> LinkedIn
                   </a>
                 </Button>
@@ -98,11 +121,15 @@ export function ContactSection() {
             <div className="card-glass p-5 rounded-xl border border-green-500/20">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2 h-2 rounded-full bg-green-400 pulse-glow" />
-                <span className="text-sm font-500 text-green-400">Available Now</span>
+                <span className="text-sm font-500 text-green-400">
+                  Available
+                </span>
               </div>
               <p className="text-sm text-[rgb(var(--text-secondary))]">
-                Open to full-time remote roles and freelance projects. Typical response within
-                24 hours.
+                Currently working on-site in Bangladesh. Open to remote
+                part-time projects and would consider full-time remote
+                opportunities if the right role comes along. Typical response
+                within 24 hours.
               </p>
             </div>
           </motion.div>
@@ -123,16 +150,26 @@ export function ContactSection() {
                   role="status"
                 >
                   <CheckCircle2 className="w-12 h-12 text-green-400 mb-4" />
-                  <h3 className="font-display text-xl font-600 mb-2">Message Sent!</h3>
+                  <h3 className="font-display text-xl font-600 mb-2">
+                    Message Sent!
+                  </h3>
                   <p className="text-[rgb(var(--text-secondary))] text-sm">
-                    Thanks for reaching out. I&apos;ll get back to you within 24 hours.
+                    Thanks for reaching out. I&apos;ll get back to you within 24
+                    hours.
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="space-y-5"
+                  noValidate
+                >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="name" className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider">
+                      <label
+                        htmlFor="name"
+                        className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider"
+                      >
                         Name
                       </label>
                       <Input
@@ -143,11 +180,16 @@ export function ContactSection() {
                         className={errors.name ? "border-red-400/50" : ""}
                       />
                       {errors.name && (
-                        <p className="text-xs text-red-400 mt-1" role="alert">{errors.name.message}</p>
+                        <p className="text-xs text-red-400 mt-1" role="alert">
+                          {errors.name.message}
+                        </p>
                       )}
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider">
+                      <label
+                        htmlFor="email"
+                        className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider"
+                      >
                         Email
                       </label>
                       <Input
@@ -159,13 +201,18 @@ export function ContactSection() {
                         className={errors.email ? "border-red-400/50" : ""}
                       />
                       {errors.email && (
-                        <p className="text-xs text-red-400 mt-1" role="alert">{errors.email.message}</p>
+                        <p className="text-xs text-red-400 mt-1" role="alert">
+                          {errors.email.message}
+                        </p>
                       )}
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider">
+                    <label
+                      htmlFor="subject"
+                      className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider"
+                    >
                       Subject
                     </label>
                     <Input
@@ -176,12 +223,17 @@ export function ContactSection() {
                       className={errors.subject ? "border-red-400/50" : ""}
                     />
                     {errors.subject && (
-                      <p className="text-xs text-red-400 mt-1" role="alert">{errors.subject.message}</p>
+                      <p className="text-xs text-red-400 mt-1" role="alert">
+                        {errors.subject.message}
+                      </p>
                     )}
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider">
+                    <label
+                      htmlFor="message"
+                      className="block text-xs text-[rgb(var(--text-muted))] mb-2 uppercase tracking-wider"
+                    >
                       Message
                     </label>
                     <Textarea
@@ -193,7 +245,9 @@ export function ContactSection() {
                       className={errors.message ? "border-red-400/50" : ""}
                     />
                     {errors.message && (
-                      <p className="text-xs text-red-400 mt-1" role="alert">{errors.message.message}</p>
+                      <p className="text-xs text-red-400 mt-1" role="alert">
+                        {errors.message.message}
+                      </p>
                     )}
                   </div>
 
