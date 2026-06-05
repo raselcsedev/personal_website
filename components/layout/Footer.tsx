@@ -7,7 +7,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[rgb(var(--border-subtle))] bg-[rgb(var(--bg-secondary)/0.3)]">
+    <footer className="border-t border-[rgb(var(--border-subtle))] bg-[linear-gradient(180deg,rgb(var(--bg-secondary)/0.35),rgb(var(--bg-primary)/0.55))]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
@@ -63,7 +63,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
-                className="w-10 h-10 rounded-xl card-solid flex items-center justify-center text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] hover:border-[rgb(var(--accent)/0.3)] transition-all"
+                className="w-10 h-10 rounded-xl card-solid flex items-center justify-center text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] hover:border-[rgb(var(--accent)/0.35)] hover:bg-[linear-gradient(135deg,rgb(var(--accent)/0.10),rgb(var(--accent-2)/0.12))] transition-all"
               >
                 <Github className="w-4 h-4" />
               </a>
@@ -72,7 +72,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="w-10 h-10 rounded-xl card-solid flex items-center justify-center text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] hover:border-[rgb(var(--accent)/0.3)] transition-all"
+                className="w-10 h-10 rounded-xl card-solid flex items-center justify-center text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] hover:border-[rgb(var(--accent)/0.35)] hover:bg-[linear-gradient(135deg,rgb(var(--accent)/0.10),rgb(var(--accent-2)/0.12))] transition-all"
               >
                 <Linkedin className="w-4 h-4" />
               </a>

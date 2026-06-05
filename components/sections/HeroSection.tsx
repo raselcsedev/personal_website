@@ -88,11 +88,13 @@ export function HeroSection() {
           animate="visible"
           className="max-w-3xl"
         >
-          <motion.div variants={fadeUpVariants} className="mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-500 card-glass border border-green-500/20">
-              <span className="w-2 h-2 rounded-full bg-green-400 pulse-glow" />
-              <span className="text-green-400">Available for work</span>
+          <motion.div variants={fadeUpVariants} className="mb-6 flex flex-wrap items-center gap-3">
+            <span className="soft-pill border-emerald-400/30 text-emerald-400/90">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-glow" />
+              Available for work
             </span>
+            <span className="soft-pill">Next.js · React · Tailwind</span>
+            <span className="soft-pill">UI/UX Focused</span>
           </motion.div>
 
           <motion.div variants={fadeUpVariants}>
@@ -108,7 +110,7 @@ export function HeroSection() {
           </motion.div>
 
           <motion.div variants={fadeUpVariants} className="mt-4 mb-6">
-            <p className="font-display text-xl text-[rgb(var(--text-secondary))]">
+            <p className="font-display text-xl md:text-2xl text-[rgb(var(--text-secondary))] leading-tight">
               Hi, I&apos;m{" "}
               <strong className="text-[rgb(var(--text-primary))] font-600">
                 {PERSONAL_INFO.name}
@@ -152,11 +154,11 @@ export function HeroSection() {
               { num: "20+", label: "Projects Shipped" },
               { num: "15+", label: "Happy Clients" },
             ].map((stat) => (
-              <div key={stat.label}>
+              <div key={stat.label} className="surface-panel px-4 py-4 min-w-[8.8rem] rounded-2xl">
                 <p className="font-display text-3xl font-700 gradient-text">
                   {stat.num}
                 </p>
-                <p className="text-sm text-[rgb(var(--text-muted))]">
+                <p className="text-sm text-[rgb(var(--text-muted))] mt-1">
                   {stat.label}
                 </p>
               </div>

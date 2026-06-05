@@ -48,7 +48,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "py-3 bg-[rgb(var(--bg-primary)/0.85)] backdrop-blur-xl border-b border-[rgb(var(--border-subtle))] shadow-sm"
+          ? "py-3 bg-[rgb(var(--bg-primary)/0.82)] backdrop-blur-xl border-b border-[rgb(var(--border-subtle))] shadow-[0_10px_30px_rgb(15_23_42/0.08)]"
           : "py-5 bg-transparent"
       )}
     >
@@ -73,8 +73,8 @@ export function Navbar() {
                 className={cn(
                   "px-4 py-2 text-sm rounded-lg transition-colors",
                   isActive
-                    ? "text-[rgb(var(--accent))] bg-[rgb(var(--accent)/0.08)]"
-                    : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--bg-secondary))]"
+                    ? "text-[rgb(var(--accent))] bg-[linear-gradient(135deg,rgb(var(--accent)/0.12),rgb(var(--accent-2)/0.12))] shadow-sm"
+                    : "text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--bg-secondary)/0.85)]"
                 )}
               >
                 {link.label}
@@ -87,7 +87,7 @@ export function Navbar() {
           {mounted && (
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="w-9 h-9 rounded-lg flex items-center justify-center text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--bg-secondary))] transition-all"
+              className="w-9 h-9 rounded-xl flex items-center justify-center text-[rgb(var(--text-secondary))] hover:text-[rgb(var(--text-primary))] hover:bg-[rgb(var(--bg-secondary))] transition-all border border-[rgb(var(--border-subtle))] bg-[rgb(var(--bg-card)/0.65)] backdrop-blur"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
