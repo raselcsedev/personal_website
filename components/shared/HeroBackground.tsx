@@ -20,13 +20,13 @@ export function HeroBackground() {
       <motion.div
         animate={{ scale: [1, 1.08, 1], opacity: [0.06, 0.1, 0.06] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 -right-20 w-[500px] h-[500px] rounded-full blur-[100px]"
+        className="absolute top-1/4 hidden lg:block lg:-right-20 lg:w-[500px] lg:h-[500px] lg:blur-[100px]"
         style={{ background: "rgb(var(--accent))" }}
       />
       <motion.div
         animate={{ scale: [1, 1.12, 1], opacity: [0.04, 0.08, 0.04] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-1/4 -left-20 w-[400px] h-[400px] rounded-full blur-[90px]"
+        className="absolute bottom-1/4 hidden lg:block lg:-left-20 lg:w-[400px] lg:h-[400px] lg:blur-[90px]"
         style={{ background: "rgb(var(--accent-2))" }}
       />
 

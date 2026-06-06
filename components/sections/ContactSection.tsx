@@ -65,7 +65,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-8"
+            className="lg:col-span-2 space-y-8 w-full min-w-0"
           >
             <div className="space-y-5">
               {[
@@ -96,7 +96,7 @@ export function ContactSection() {
               <p className="text-xs text-[rgb(var(--text-muted))] mb-4 uppercase tracking-widest">
                 Find me on
               </p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 <Button variant="outline" size="sm" asChild>
                   <a
                     href={PERSONAL_INFO.github}
@@ -139,9 +139,9 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-3"
+            className="lg:col-span-3 w-full min-w-0"
           >
-            <div className="card-solid p-8">
+            <div className="card-solid p-4 sm:p-8 w-full min-w-0">
               {isSubmitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}

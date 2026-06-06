@@ -64,14 +64,15 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="w-full min-w-0 max-w-full"
           >
-            <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-6">
+            <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-6 max-w-full overflow-wrap-anywhere">
               I&apos;m a <strong className="text-[rgb(var(--text-primary))]">Frontend Developer</strong> with
               3+ years of professional experience building web applications that scale. My core stack is{" "}
               <strong className="text-[rgb(var(--text-primary))]">Next.js + React.js + Angular + Tailwind CSS</strong>, and I&apos;ve
               shipped everything from SPAs to multi-vendor SaaS platforms.
             </p>
-            <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-8">
+            <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-8 max-w-full overflow-wrap-anywhere">
               I care deeply about code quality, developer experience, and shipping products that work in production.
               I&apos;m actively seeking remote full-time roles and high-value freelance projects.
             </p>
@@ -84,10 +85,10 @@ export function AboutSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="flex items-start gap-3"
+                  className="flex items-start gap-3 w-full min-w-0"
                 >
                   <CheckCircle2 className="w-4 h-4 text-[rgb(var(--accent))] shrink-0 mt-0.5" />
-                  <span className="text-sm text-[rgb(var(--text-secondary))]">{h}</span>
+                  <span className="text-sm text-[rgb(var(--text-secondary))] leading-relaxed break-all overflow-wrap-anywhere max-w-full">{h}</span>
                 </motion.div>
               ))}
             </div>

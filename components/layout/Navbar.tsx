@@ -62,7 +62,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
+        <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
           {NAV_LINKS.map((link) => {
             const id = link.href.replace("#", "");
             const isActive = activeSection === id;
@@ -94,13 +94,13 @@ export function Navbar() {
             </button>
           )}
 
-          <Button asChild className="hidden md:inline-flex" size="sm">
+          <Button asChild className="hidden lg:inline-flex" size="sm">
             <a href="#contact">Hire Me</a>
           </Button>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden w-9 h-9 rounded-lg flex items-center justify-center text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--bg-secondary))] transition-all"
+            className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-[rgb(var(--text-secondary))] hover:bg-[rgb(var(--bg-secondary))] transition-all"
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
           >
@@ -116,7 +116,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-[rgb(var(--border-subtle))] bg-[rgb(var(--bg-primary)/0.95)] backdrop-blur-xl overflow-hidden"
+            className="lg:hidden border-t border-[rgb(var(--border-subtle))] bg-[rgb(var(--bg-primary)/0.95)] backdrop-blur-xl overflow-hidden"
           >
             <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
