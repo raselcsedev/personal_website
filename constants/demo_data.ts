@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
       "Real-time POS system for retail stores featuring inventory sync, receipt printing, sales analytics, multi-cashier support, and offline-first PWA capability.",
     image: "/projects/pos.jpg",
     tech: ["React.js", "Express.js", "MongoDB", "Socket.io", "PWA"],
-    github: "https://github.com/alexrahman/swiftpos",
+    github: "https://github.com/raselcsedev/pos_system",
     live: "https://swiftpos.vercel.app",
     category: "fullstack",
     featured: true,

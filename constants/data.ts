@@ -64,7 +64,26 @@ export const SKILLS: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: "1",
+  id: "1",
+  title: "AI Content Studio — AI SaaS Platform",
+  description:
+    "A modern AI-powered SaaS platform for generating blog posts, emails, code snippets, and image prompts. Features secure authentication, content history, analytics dashboard, OpenAI integration, and a responsive user experience with dark/light themes.",
+  image: "/projects/ai-content-studio.jpg",
+  tech: [
+    "Next.js 15",
+    "TypeScript",
+    "MongoDB",
+    "OpenAI API",
+    "Tailwind CSS",
+    "Shadcn UI"
+  ],
+  github: "https://github.com/raselcsedev/ai-content-studio",
+  live: "https://ai-content-studio.vercel.app",
+  category: "fullstack",
+  featured: true,
+},
+  {
+    id: "2",
     title: "RetailPOS — Full-Stack Point of Sale System",
     description:
       "A modern full-stack POS and inventory management system built with Next.js 16, TypeScript, MongoDB, Tailwind CSS, NextAuth, Zustand, and TanStack Table. Includes role-based authentication, sales dashboard, barcode scanning, thermal receipt printing, inventory tracking, reporting, and offline-ready PWA support.",
@@ -88,7 +107,7 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "2",
+    id: "3",
     title: "Mohona Tours and Travels",
     description:
       "A responsive travel agency website built with React and Tailwind CSS. Includes featured packages, travel destinations, and a travel blog for tips and recommendations.",
@@ -100,7 +119,7 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "3",
+    id: "4",
     title: "Easy Life Shopping",
     description:
       "An e-commerce shopping website with dynamic category-based filtering, responsive UI components, and advanced product navigation for a seamless customer experience.",
@@ -112,7 +131,7 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "4",
+    id: "5",
     title: "Music Master",
     description:
       "A responsive music application frontend template developed with Next.js, TypeScript, and Aceternity UI for a polished, user-friendly listening experience.",
@@ -124,7 +143,7 @@ export const PROJECTS: Project[] = [
     featured: false,
   },
   {
-    id: "5",
+    id: "6",
     title: "Innovative Gadgets",
     description:
       "An e-commerce website template built with React and Redux Toolkit, focusing on responsive design, type safety, and reusable UI components.",
@@ -136,7 +155,7 @@ export const PROJECTS: Project[] = [
     featured: false,
   },
   {
-  id: "6",
+  id: "7",
   title: "Our Car Rental — Online Car Booking Platform",
   description:
     "A streamlined online car rental platform with interactive free map location picking, Stripe payment integration, and SMTP email notifications. Users can browse available cars, select pickup locations on the map, complete bookings, and receive confirmation emails — ideal for individuals and teams looking for an efficient way to rent and pay online.",
