@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 const HIGHLIGHTS = [
   "3+ years of professional full-stack experience",
-  "20+ production projects shipped",
+  // "20+ production projects shipped",
   "Expert in Next.js App Router & React ecosystem",
   "Strong Node.js API and MongoDB architecture skills",
   "Experienced with payment systems: Stripe, PayPal, SSLCommerz",
@@ -34,7 +34,7 @@ export function AboutSection() {
                   <div className="w-20 h-20 rounded-2xl accent-bg flex items-center justify-center mx-auto mb-3">
                     <Code2 className="w-10 h-10 text-white" />
                   </div>
-                  <p className="font-display font-700 text-2xl gradient-text">AR</p>
+                  <p className="font-display font-700 text-2xl gradient-text">RA</p>
                   <p className="text-xs text-[rgb(var(--text-muted))] mt-1">Frontend Developer</p>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-[rgb(var(--accent)/0.06)] to-[rgb(var(--accent-2)/0.06)]" />
