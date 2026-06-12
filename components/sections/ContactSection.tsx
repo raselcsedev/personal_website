@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import emailjs from "@emailjs/browser";
+
 import {
   Send,
   Github,
@@ -13,6 +15,7 @@ import {
   MapPin,
   CheckCircle2,
 } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -41,13 +44,33 @@ export function ContactSection() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    setIsLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    console.log("Form submitted:", data);
-    setIsLoading(false);
-    setIsSubmitted(true);
-    reset();
-    setTimeout(() => setIsSubmitted(false), 5000);
+    try {
+      setIsLoading(true);
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      setIsSubmitted(true);
+      reset();
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -80,6 +103,7 @@ export function ContactSection() {
                   <div className="w-10 h-10 rounded-xl accent-bg flex items-center justify-center shrink-0">
                     <Icon className="w-4 h-4 text-white" />
                   </div>
+
                   <div>
                     <p className="text-xs text-[rgb(var(--text-muted))] mb-0.5">
                       {label}
@@ -96,6 +120,7 @@ export function ContactSection() {
               <p className="text-xs text-[rgb(var(--text-muted))] mb-4 uppercase tracking-widest">
                 Find me on
               </p>
+
               <div className="flex flex-wrap gap-3">
                 <Button variant="outline" size="sm" asChild>
                   <a
@@ -103,16 +128,19 @@ export function ContactSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Github className="w-4 h-4" /> GitHub
+                    <Github className="w-4 h-4" />
+                    GitHub
                   </a>
                 </Button>
+
                 <Button variant="outline" size="sm" asChild>
                   <a
                     href={PERSONAL_INFO.linkedin}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Linkedin className="w-4 h-4" /> LinkedIn
+                    <Linkedin className="w-4 h-4" />
+                    LinkedIn
                   </a>
                 </Button>
               </div>
@@ -125,6 +153,7 @@ export function ContactSection() {
                   Available
                 </span>
               </div>
+
               <p className="text-sm text-[rgb(var(--text-secondary))]">
                 Currently working on-site in Bangladesh. Open to remote
                 part-time projects and would consider full-time remote
@@ -150,11 +179,13 @@ export function ContactSection() {
                   role="status"
                 >
                   <CheckCircle2 className="w-12 h-12 text-green-400 mb-4" />
+
                   <h3 className="font-display text-xl font-600 mb-2">
                     Message Sent!
                   </h3>
+
                   <p className="text-[rgb(var(--text-secondary))] text-sm">
-                    Thanks for reaching out. I&apos;ll get back to you within 24
+                    Thanks for reaching out. I'll get back to you within 24
                     hours.
                   </p>
                 </motion.div>
@@ -172,19 +203,22 @@ export function ContactSection() {
                       >
                         Name
                       </label>
+
                       <Input
                         id="name"
-                        {...register("name")}
                         placeholder="Your name"
+                        {...register("name")}
                         aria-invalid={!!errors.name}
                         className={errors.name ? "border-red-400/50" : ""}
                       />
+
                       {errors.name && (
                         <p className="text-xs text-red-400 mt-1" role="alert">
                           {errors.name.message}
                         </p>
                       )}
                     </div>
+
                     <div>
                       <label
                         htmlFor="email"
@@ -192,14 +226,16 @@ export function ContactSection() {
                       >
                         Email
                       </label>
+
                       <Input
                         id="email"
                         type="email"
-                        {...register("email")}
                         placeholder="your@email.com"
+                        {...register("email")}
                         aria-invalid={!!errors.email}
                         className={errors.email ? "border-red-400/50" : ""}
                       />
+
                       {errors.email && (
                         <p className="text-xs text-red-400 mt-1" role="alert">
                           {errors.email.message}
@@ -215,13 +251,15 @@ export function ContactSection() {
                     >
                       Subject
                     </label>
+
                     <Input
                       id="subject"
-                      {...register("subject")}
                       placeholder="What is this about?"
+                      {...register("subject")}
                       aria-invalid={!!errors.subject}
                       className={errors.subject ? "border-red-400/50" : ""}
                     />
+
                     {errors.subject && (
                       <p className="text-xs text-red-400 mt-1" role="alert">
                         {errors.subject.message}
@@ -236,14 +274,16 @@ export function ContactSection() {
                     >
                       Message
                     </label>
+
                     <Textarea
                       id="message"
-                      {...register("message")}
                       rows={5}
                       placeholder="Tell me about your project or opportunity..."
+                      {...register("message")}
                       aria-invalid={!!errors.message}
                       className={errors.message ? "border-red-400/50" : ""}
                     />
+
                     {errors.message && (
                       <p className="text-xs text-red-400 mt-1" role="alert">
                         {errors.message.message}
@@ -251,7 +291,11 @@ export function ContactSection() {
                     )}
                   </div>
 
-                  <Button type="submit" disabled={isLoading} className="w-full">
+                  <Button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full"
+                  >
                     {isLoading ? (
                       <>
                         <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -259,7 +303,8 @@ export function ContactSection() {
                       </>
                     ) : (
                       <>
-                        <Send className="w-4 h-4" /> Send Message
+                        <Send className="w-4 h-4" />
+                        Send Message
                       </>
                     )}
                   </Button>
