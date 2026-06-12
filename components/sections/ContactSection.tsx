@@ -79,7 +79,7 @@ export function ContactSection() {
         <SectionHeader
           label="Get In Touch"
           title="Let's Work Together"
-          subtitle="Have a project in mind or a role to fill? I'm actively looking for remote opportunities and freelance work."
+          subtitle="Have a project in mind or a role to fill? I&apos;m actively looking for remote opportunities and freelance work."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
@@ -185,7 +185,7 @@ export function ContactSection() {
                   </h3>
 
                   <p className="text-[rgb(var(--text-secondary))] text-sm">
-                    Thanks for reaching out. I'll get back to you within 24
+                    Thanks for reaching out. I&apos;ll get back to you within 24
                     hours.
                   </p>
                 </motion.div>
