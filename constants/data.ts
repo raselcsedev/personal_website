@@ -102,7 +102,7 @@ export const PROJECTS: Project[] = [
       "Recharts",
     ],
     github: "https://github.com/raselcsedev/retail-pos",
-    live: "#",
+    live: "https://jovial-sable-2db9bd.netlify.app/",
     category: "fullstack",
     featured: true,
   },
