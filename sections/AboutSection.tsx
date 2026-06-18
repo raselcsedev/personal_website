@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 const HIGHLIGHTS = [
   "3+ years of professional full-stack experience",
-  // "20+ production projects shipped",
+  "20+ production projects shipped",
   "Expert in Next.js App Router & React ecosystem",
   "Strong Node.js API and MongoDB architecture skills",
   "Experienced with payment systems: Stripe, PayPal, SSLCommerz",
@@ -51,7 +51,7 @@ export function AboutSection() {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                className="absolute -left-4 bottom-8 card-glass p-3 rounded-xl shadow-xl"
+                className="absolute left-2 bottom-8 card-glass p-3 rounded-xl shadow-xl"
               >
                 <p className="font-display text-2xl font-700 gradient-text">3+</p>
                 <p className="text-xs text-[rgb(var(--text-muted))]">Years</p>

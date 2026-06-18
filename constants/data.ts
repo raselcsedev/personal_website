@@ -291,7 +291,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "James Okonkwo",
     role: "Founder, FoodDash",
     content:
-      "Our delivery app needed to handle real-time updates for 500+ concurrent orders. Alex's WebSocket architecture handled it flawlessly. Absolutely brilliant developer.",
+      "Our delivery app needed to handle real-time updates for 500+ concurrent orders. Rasel's WebSocket architecture handled it flawlessly. Absolutely brilliant developer.",
     avatar: "/avatars/james.jpg",
     rating: 5,
   },
@@ -300,7 +300,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Priya Sharma",
     role: "Product Manager, SaaSify",
     content:
-      "Working with Alex on our multi-vendor dashboard was a pleasure. He asked the right questions upfront, maintained clear communication, and delivered beyond expectations.",
+      "Working with Rasel on our multi-vendor dashboard was a pleasure. He asked the right questions upfront, maintained clear communication, and delivered beyond expectations.",
     avatar: "/avatars/priya.jpg",
     rating: 5,
   },

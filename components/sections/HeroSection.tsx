@@ -94,7 +94,7 @@ export function HeroSection() {
               Available for work
             </span>
             <span className="soft-pill">Next.js · React · Tailwind</span>
-            <span className="soft-pill">UI/UX Focused</span>
+            {/* <span className="soft-pill">UI/UX Focused</span> */}
           </motion.div>
 
           <motion.div variants={fadeUpVariants}>
