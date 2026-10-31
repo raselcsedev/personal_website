@@ -1,17 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { CATEGORY_GRADIENTS } from "@/lib/projects";
 import type { ProjectCardProps } from "@/types";
-
-const CATEGORY_GRADIENTS: Record<string, string> = {
-  fullstack: "from-orange-500/20 to-violet-500/20",
-  frontend: "from-blue-500/20 to-cyan-500/20",
-  backend: "from-green-500/20 to-emerald-500/20",
-  mobile: "from-pink-500/20 to-rose-500/20",
-  dashboard: "from-amber-500/20 to-orange-500/20",
-};
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const gradient = CATEGORY_GRADIENTS[project.category] ?? CATEGORY_GRADIENTS.fullstack;
@@ -23,7 +17,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4, delay: index * 0.06 }}
-      className="group card-solid overflow-hidden hover:border-[rgb(var(--accent)/0.35)] hover:shadow-xl hover:shadow-[rgb(var(--accent)/0.06)] transition-all duration-300"
+      className="group relative card-solid overflow-hidden hover:border-[rgb(var(--accent)/0.35)] hover:shadow-xl hover:shadow-[rgb(var(--accent)/0.06)] transition-all duration-300"
     >
       <div className={`relative h-44 overflow-hidden bg-gradient-to-br ${gradient}`}>
         <div className="absolute inset-0 grid-bg opacity-50" />
@@ -38,7 +32,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.github}
               target="_blank"
               rel="noreferrer"
-              className="w-10 h-10 rounded-full card-glass flex items-center justify-center text-[rgb(var(--text-primary))] hover:scale-110 transition-transform"
+              className="relative z-10 w-10 h-10 rounded-full card-glass flex items-center justify-center text-[rgb(var(--text-primary))] hover:scale-110 transition-transform"
               aria-label={`View ${project.title} on GitHub`}
             >
               <Github className="w-4 h-4" />
@@ -49,7 +43,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.live}
               target="_blank"
               rel="noreferrer"
-              className="w-10 h-10 rounded-full accent-bg flex items-center justify-center text-white hover:scale-110 transition-transform"
+              className="relative z-10 w-10 h-10 rounded-full accent-bg flex items-center justify-center text-white hover:scale-110 transition-transform"
               aria-label={`View ${project.title} live demo`}
             >
               <ExternalLink className="w-4 h-4" />
@@ -63,7 +57,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {project.category}
         </Badge>
         <h3 className="font-display text-lg font-600 text-[rgb(var(--text-primary))] group-hover:text-[rgb(var(--accent))] transition-colors mb-2">
-          {project.title}
+          <Link
+            href={`/projects/${project.slug}`}
+            className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-[rgb(var(--accent))] after:rounded-[inherit]"
+          >
+            {project.title}
+          </Link>
         </h3>
         <p className="text-sm text-[rgb(var(--text-secondary))] leading-relaxed mb-4 line-clamp-3">
           {project.description}
@@ -84,7 +83,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.github}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 text-xs text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] transition-colors"
+              className="relative z-10 flex items-center gap-1.5 text-xs text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] transition-colors"
             >
               <Github className="w-3.5 h-3.5" /> Code
             </a>
@@ -94,7 +93,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.live}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 text-xs text-[rgb(var(--accent))] hover:opacity-80 transition-opacity"
+              className="relative z-10 flex items-center gap-1.5 text-xs text-[rgb(var(--accent))] hover:opacity-80 transition-opacity"
             >
               <ExternalLink className="w-3.5 h-3.5" /> Live Demo
             </a>
@@ -103,6 +102,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <span className="text-xs text-[rgb(var(--text-muted))]">Private / company project</span>
             )
           )}
+          <span className="ml-auto flex items-center gap-1 text-xs font-500 text-[rgb(var(--text-secondary))] group-hover:text-[rgb(var(--accent))] transition-colors">
+            Details <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+          </span>
         </div>
       </div>
     </motion.article>

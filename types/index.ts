@@ -13,8 +13,13 @@ export interface Skill {
 
 export interface Project {
   id: string;
+  slug: string; // used in the URL: /projects/<slug>
   title: string;
-  description: string;
+  description: string; // short summary shown on the card
+  overview: string; // longer text shown on the details page
+  role: string;
+  projectType: "personal" | "company";
+  features: string[];
   image: string;
   tech: string[];
   github?: string; // optional: private/company projects have no public repo

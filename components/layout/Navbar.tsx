@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Menu, X, Code2 } from "lucide-react";
@@ -25,6 +26,9 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const mounted = useMounted();
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
+  const router = useRouter();
+  const isHome = pathname === "/";
   const activeSection = useScrollSpy(SECTION_IDS);
 
   useEffect(() => {
@@ -35,6 +39,11 @@ export function Navbar() {
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
+    // On project pages the sections live on the home page, so go there first
+    if (!isHome) {
+      router.push(`/${href}`);
+      return;
+    }
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
@@ -64,7 +73,7 @@ export function Navbar() {
         <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
           {NAV_LINKS.map((link) => {
             const id = link.href.replace("#", "");
-            const isActive = activeSection === id;
+            const isActive = isHome && activeSection === id;
             return (
               <button
                 key={link.href}
@@ -94,7 +103,7 @@ export function Navbar() {
           )}
 
           <Button asChild className="hidden lg:inline-flex" size="sm">
-            <a href="#contact">Hire Me</a>
+            <Link href="/#contact">Hire Me</Link>
           </Button>
 
           <button
@@ -128,7 +137,7 @@ export function Navbar() {
                 </button>
               ))}
               <Button asChild className="mt-2 w-full">
-                <a href="#contact">Hire Me</a>
+                <Link href="/#contact">Hire Me</Link>
               </Button>
             </div>
           </motion.div>
