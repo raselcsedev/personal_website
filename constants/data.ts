@@ -51,6 +51,7 @@ export const SKILLS: Skill[] = [
       { name: "REST APIs", level: 92, icon: "🔌" },
       { name: "Authentication", level: 88, icon: "🔒" },
       { name: "Payment Gateway", level: 82, icon: "💳" },
+      { name: ".NET", level: 70, icon: "🟪" }, // TODO: adjust level
       { name: "NextAuth.js", level: 85, icon: "🔑" },
       { name: "Firebase / Pusher", level: 80, icon: "🔔" },
     ],
@@ -61,6 +62,7 @@ export const SKILLS: Skill[] = [
     items: [
       { name: "JavaScript", level: 94, icon: "🟨" },
       { name: "TypeScript", level: 92, icon: "🔷" },
+      { name: "C#", level: 70, icon: "🟣" }, // TODO: adjust level
       { name: "HTML5 / CSS3", level: 95, icon: "📄" },
       { name: "SQL / NoSQL queries", level: 78, icon: "🗄️" },
     ],
@@ -216,6 +218,17 @@ export const PROJECTS: Project[] = [
     // Company project: no public repo or demo link. Add `live` here if one becomes public.
     category: "frontend",
     featured: true,
+  },
+  {
+    id: "9",
+    // TODO: replace the title, description, tech list and github link with your real project details
+    title: ".NET Backend Project",
+    description:
+      "A backend application built with C# and .NET, expanding my stack beyond the JavaScript ecosystem. It focuses on clean, strongly typed code, a well-structured project layout, and building reliable APIs that can pair with my Next.js and React frontends.",
+    image: "/projects/dotnet-project.jpg",
+    tech: ["C#", ".NET", "REST APIs"],
+    category: "backend",
+    featured: false,
   },
 ];
 
