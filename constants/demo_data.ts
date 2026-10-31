@@ -67,6 +67,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/projects/dotnet-project.jpg",
     tech: ["C#", ".NET", "ASP.NET Core Web API", "REST APIs"],
+    github: "https://github.com/raselcsedev/product-manager",
     category: "backend",
     featured: false,
   },
