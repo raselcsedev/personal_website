@@ -12,6 +12,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  Phone,
   MapPin,
   CheckCircle2,
 } from "lucide-react";
@@ -103,6 +104,7 @@ export function ContactSection() {
             <div className="space-y-5">
               {[
                 { icon: Mail, label: "Email", value: PERSONAL_INFO.email },
+                { icon: Phone, label: "Phone", value: PERSONAL_INFO.phone },
                 {
                   icon: MapPin,
                   label: "Location",

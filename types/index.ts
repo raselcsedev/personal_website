@@ -28,10 +28,19 @@ export type Experience = {
   company: string;
   role: string;
   duration: string;
+  location?: string;
   description: string[];
   tech: string[];
   type: "full-time" | "part-time" | "freelance" | "contract";
 };
+
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  duration: string;
+  location?: string;
+}
 
 export interface Service {
   id: string;

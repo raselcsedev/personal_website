@@ -5,13 +5,13 @@ import { CheckCircle2, Code2 } from "lucide-react";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
 const HIGHLIGHTS = [
-  "3+ years of professional full-stack experience",
-  "20+ production projects shipped",
-  "Expert in Next.js App Router & React ecosystem",
-  "Built AI-powered products: content generation, image & video tools",
-  "Strong Node.js API and MongoDB architecture skills",
-  "Experienced with payment systems: Stripe, PayPal, SSLCommerz",
-  "Angular frontend development & enterprise applications",
+  "4 years of professional frontend experience with React.js, Next.js, Angular & TypeScript",
+  "Delivered enterprise ERP systems, multi-vendor eCommerce platforms, and AI-powered products",
+  "Migrated legacy React, AngularJS & ASP.NET WebForms pages to Angular 17+ standalone components",
+  "Built 10+ industry-specific storefront themes with dynamic theming",
+  "REST & GraphQL API integration, plus bKash and SSLCommerz payment gateways",
+  "Multilingual (next-intl) and multi-currency UI development",
+  "Agile, cross-functional teamwork with reusable component design and code review",
 ];
 
 export function AboutSection() {
@@ -46,15 +46,15 @@ export function AboutSection() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -right-4 top-8 card-glass p-3 rounded-xl shadow-xl"
               >
-                <p className="font-display text-2xl font-700 gradient-text">20+</p>
-                <p className="text-xs text-[rgb(var(--text-muted))]">Projects</p>
+                <p className="font-display text-2xl font-700 gradient-text">10+</p>
+                <p className="text-xs text-[rgb(var(--text-muted))]">Storefront Themes</p>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                 className="absolute left-2 bottom-8 card-glass p-3 rounded-xl shadow-xl"
               >
-                <p className="font-display text-2xl font-700 gradient-text">3+</p>
+                <p className="font-display text-2xl font-700 gradient-text">4+</p>
                 <p className="text-xs text-[rgb(var(--text-muted))]">Years</p>
               </motion.div>
             </div>
@@ -69,9 +69,9 @@ export function AboutSection() {
           >
             <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-6 max-w-full overflow-wrap-anywhere">
               I&apos;m a <strong className="text-[rgb(var(--text-primary))]">Frontend Developer</strong> with
-              3+ years of professional experience building web applications that scale. My core stack is{" "}
+              4 years of professional experience building production web applications that scale. My core stack is{" "}
               <strong className="text-[rgb(var(--text-primary))]">Next.js + React.js + Angular + Tailwind CSS</strong>, and I&apos;ve
-              shipped everything from SPAs to multi-vendor SaaS platforms.
+              shipped enterprise ERP systems, multi-vendor eCommerce platforms, and AI-powered products.
             </p>
             <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-8 max-w-full overflow-wrap-anywhere">
               I care deeply about code quality, developer experience, and shipping products that work in production.

@@ -16,10 +16,10 @@ import { PERSONAL_INFO } from "@/constants/data";
 
 const ROTATING_WORDS = [
   "Next.js Apps",
-  "REST APIs",
-  "E-Commerce",
-  "Dashboards",
-  "Scalable Systems",
+  "Angular ERP Systems",
+  "E-Commerce Platforms",
+  "AI-Powered Products",
+  "Reusable UI Components",
 ];
 
 export function HeroSection() {
@@ -93,7 +93,7 @@ export function HeroSection() {
               <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-glow" />
               Available for work
             </span>
-            <span className="soft-pill">Next.js · React · Tailwind</span>
+            <span className="soft-pill">Next.js · React · Angular · Tailwind</span>
             {/* <span className="soft-pill">UI/UX Focused</span> */}
           </motion.div>
 
@@ -150,9 +150,9 @@ export function HeroSection() {
             className="flex flex-wrap gap-8 mb-12"
           >
             {[
-              { num: "3+", label: "Years Experience" },
-              { num: "20+", label: "Projects Shipped" },
-              { num: "15+", label: "Happy Clients" },
+              { num: "4+", label: "Years Experience" },
+              { num: "10+", label: "Storefront Themes" },
+              { num: "5+", label: "Production Products" },
             ].map((stat) => (
               <div key={stat.label} className="surface-panel px-4 py-4 min-w-[8.8rem] rounded-2xl">
                 <p className="font-display text-3xl font-700 gradient-text">

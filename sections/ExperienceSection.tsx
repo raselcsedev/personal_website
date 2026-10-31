@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar } from "lucide-react";
-import { EXPERIENCE } from "@/constants/data";
+import { Calendar, GraduationCap, MapPin } from "lucide-react";
+import { EXPERIENCE, EDUCATION } from "@/constants/data";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export function ExperienceSection() {
@@ -13,7 +13,7 @@ export function ExperienceSection() {
         <SectionHeader
           label="Career Path"
           title="Experience"
-          subtitle="My professional journey building web products for startups and agencies."
+          subtitle="My professional journey building enterprise ERP, eCommerce, and AI products."
         />
 
         <div className="max-w-2xl mx-auto relative">
@@ -45,6 +45,11 @@ export function ExperienceSection() {
                       <span className="flex items-center gap-1.5 text-xs text-[rgb(var(--text-muted))]">
                         <Calendar className="w-3 h-3" /> {exp.duration}
                       </span>
+                      {exp.location && (
+                        <span className="flex items-center justify-end gap-1.5 text-xs text-[rgb(var(--text-muted))] mt-1">
+                          <MapPin className="w-3 h-3" /> {exp.location}
+                        </span>
+                      )}
                       <span
                         className={`mt-1 inline-block text-xs px-2 py-0.5 rounded-full capitalize ${
                           exp.type === "full-time"
@@ -76,6 +81,36 @@ export function ExperienceSection() {
                       </span>
                     ))}
                   </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-14">
+            <h3 className="font-display text-sm uppercase tracking-widest text-[rgb(var(--accent))] mb-5 text-center">
+              Education
+            </h3>
+            {EDUCATION.map((ed) => (
+              <motion.div
+                key={ed.id}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="card-solid p-6 flex items-start gap-4"
+              >
+                <div className="w-10 h-10 rounded-xl accent-bg flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-display text-base font-600 text-[rgb(var(--text-primary))]">
+                    {ed.degree}
+                  </h4>
+                  <p className="text-sm font-500 gradient-text">{ed.institution}</p>
+                  <p className="text-xs text-[rgb(var(--text-muted))] mt-1">
+                    {ed.duration}
+                    {ed.location ? ` · ${ed.location}` : ""}
+                  </p>
                 </div>
               </motion.div>
             ))}

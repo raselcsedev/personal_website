@@ -1,138 +1,181 @@
-import { Project, Skill, Experience, Service, Testimonial } from "@/types";
+import {
+  Project,
+  Skill,
+  Experience,
+  Education,
+  Service,
+  Testimonial,
+} from "@/types";
 
 export const PERSONAL_INFO = {
   name: "Md. Rasel Aktar",
   title: "Frontend Developer",
   tagline: "Building scalable, responsive, performance-first UIs",
-  bio: "Dynamic and detail-oriented Frontend Developer with 3+ years of experience building scalable, responsive, and high-performance web applications using Next.js, React.js, TypeScript, Tailwind CSS, and ShadCN UI. Passionate about clean code, reusable components, performance optimization, and pixel-perfect UI implementation.",
+  bio: "Frontend Developer with 4 years of professional experience building production web applications with React.js, Next.js, Angular, TypeScript, and JavaScript (ES6+). I have delivered enterprise ERP systems, multi-vendor eCommerce platforms, and AI-powered products used by real businesses. Strong in REST and GraphQL API integration, reusable component architecture, state management, payment gateway integration, and responsive, multilingual UI.",
   email: "raselcse.dev@gmail.com",
+  phone: "+8801768297822",
   location: "Dhaka, Bangladesh",
   github: "https://github.com/raselcsedev",
   linkedin: "https://bd.linkedin.com/in/md-rasel-1a9957174",
   resumeUrl: "/resume.pdf",
 };
 
+// NOTE: the CV does not give proficiency percentages. The levels below are
+// estimates used for the progress bars - adjust them to your own judgement.
 export const SKILLS: Skill[] = [
   {
-    category: "Frontend",
+    category: "Languages",
     items: [
-      { name: "Next.js", level: 95, icon: "⚡" },
-      { name: "React.js", level: 95, icon: "⚛️" },
+      { name: "JavaScript (ES6+)", level: 94, icon: "🟨" },
       { name: "TypeScript", level: 92, icon: "🔷" },
-      { name: "JavaScript (ES6)", level: 94, icon: "🟨" },
-      { name: "Tailwind CSS", level: 92, icon: "🎨" },
-      { name: "ShadCN UI", level: 88, icon: "🧩" },
-      { name: "React Hook Form", level: 90, icon: "📝" },
-      { name: "TanStack Query", level: 90, icon: "🔗" },
-      { name: "Redux Toolkit", level: 88, icon: "🔄" },
-      { name: "Zustand", level: 85, icon: "🐻" },
-      { name: "Zod", level: 88, icon: "🛡️" },
-      { name: "Angular", level: 78, icon: "🅰️" },
-      { name: "GraphQL / Apollo", level: 82, icon: "◼️" },
-    ],
-  },
-  {
-    category: "UI & Styling",
-    items: [
       { name: "HTML5", level: 95, icon: "📄" },
       { name: "CSS3", level: 92, icon: "🎨" },
-      { name: "SASS / SCSS", level: 85, icon: "🎛️" },
-      { name: "Framer Motion", level: 85, icon: "🎞️" },
+      { name: "Sass", level: 85, icon: "🎛️" },
+    ],
+  },
+  {
+    category: "Frameworks & Libraries",
+    items: [
+      { name: "React.js", level: 95, icon: "⚛️" },
+      { name: "Next.js", level: 95, icon: "⚡" },
+      { name: "Angular (Standalone)", level: 88, icon: "🅰️" },
+      { name: "RxJS", level: 82, icon: "🔄" },
+      { name: "Redux Toolkit", level: 88, icon: "🗃️" },
+      { name: "TanStack Query", level: 90, icon: "🔗" },
+      { name: "React Hook Form", level: 90, icon: "📝" },
+      { name: "next-intl", level: 85, icon: "🌐" },
+    ],
+  },
+  {
+    category: "Styling & UI",
+    items: [
+      { name: "Tailwind CSS", level: 94, icon: "💨" },
       { name: "Bootstrap", level: 82, icon: "🅱️" },
+      { name: "shadcn/ui", level: 90, icon: "🧩" },
       { name: "Aceternity UI", level: 80, icon: "✨" },
+      { name: "Responsive Design", level: 95, icon: "📱" },
     ],
   },
   {
-    category: "Backend",
+    category: "APIs & Integrations",
     items: [
-      { name: "Node.js", level: 88, icon: "🟢" },
-      { name: "Express.js", level: 87, icon: "🚀" },
-      { name: "MongoDB", level: 85, icon: "🍃" },
       { name: "REST APIs", level: 92, icon: "🔌" },
-      { name: "Authentication", level: 88, icon: "🔒" },
-      { name: "Payment Gateway", level: 82, icon: "💳" },
-      { name: ".NET", level: 70, icon: "🟪" }, // TODO: adjust level
-      { name: "NextAuth.js", level: 85, icon: "🔑" },
-      { name: "Firebase / Pusher", level: 80, icon: "🔔" },
+      { name: "GraphQL", level: 85, icon: "◼️" },
+      { name: "Apollo Client", level: 85, icon: "🚀" },
+      { name: "OpenAI API", level: 82, icon: "🤖" },
+      { name: "bKash", level: 82, icon: "💳" },
+      { name: "SSLCommerz", level: 82, icon: "🔐" },
     ],
   },
-
   {
-    category: "Programming Languages",
+    category: "Backend Familiarity",
     items: [
-      { name: "JavaScript", level: 94, icon: "🟨" },
-      { name: "TypeScript", level: 92, icon: "🔷" },
-      { name: "C#", level: 70, icon: "🟣" }, // TODO: adjust level
-      { name: "HTML5 / CSS3", level: 95, icon: "📄" },
-      { name: "SQL / NoSQL queries", level: 78, icon: "🗄️" },
+      { name: "Node.js", level: 80, icon: "🟢" },
+      { name: "Express.js", level: 80, icon: "🛤️" },
+      { name: "MongoDB / Mongoose", level: 80, icon: "🍃" },
+      { name: "ASP.NET Core Web API (C#)", level: 65, icon: "🟣" },
+      { name: "MySQL", level: 70, icon: "🗄️" },
+    ],
+  },
+  {
+    category: "Tools & Platforms",
+    items: [
+      { name: "Git & GitHub", level: 90, icon: "🐙" },
+      { name: "Jira", level: 85, icon: "📋" },
+      { name: "Postman", level: 88, icon: "📬" },
+      { name: "Chrome DevTools", level: 90, icon: "🛠️" },
+      { name: "VS Code & npm", level: 95, icon: "💻" },
+      { name: "Firebase", level: 78, icon: "🔥" },
+      { name: "Vercel / Netlify", level: 85, icon: "☁️" },
     ],
   },
   {
     category: "Spoken Languages",
     items: [
-      // TODO: adjust these levels to match your real proficiency
-      { name: "Bengali (Native)", level: 100, icon: "🇧🇩" },
-      { name: "English (Professional)", level: 80, icon: "🇬🇧" },
-    ],
-  },
-  {
-    category: "Tools",
-    items: [
-      { name: "Git", level: 90, icon: "📦" },
-      { name: "GitHub", level: 90, icon: "🐙" },
-      { name: "VS Code", level: 95, icon: "💻" },
-      { name: "Postman", level: 88, icon: "📬" },
-      { name: "Vercel / Netlify", level: 85, icon: "☁️" },
+      { name: "Bangla (Native)", level: 100, icon: "🇧🇩" },
+      { name: "English (Full working proficiency)", level: 80, icon: "🇬🇧" },
     ],
   },
 ];
 
 export const PROJECTS: Project[] = [
-  {
-  id: "1",
-  title: "AI Content Studio — AI SaaS Platform",
-  description:
-    "A modern AI-powered SaaS platform for generating blog posts, emails, code snippets, and image prompts. Features secure authentication, content history, analytics dashboard, OpenAI integration, and a responsive user experience with dark/light themes.",
-  image: "/projects/ai-content-studio.jpg",
-  tech: [
-    "Next.js 15",
-    "TypeScript",
-    "MongoDB",
-    "OpenAI API",
-    "Tailwind CSS",
-    "Shadcn UI"
-  ],
-  github: "https://github.com/raselcsedev/ai-content-studio",
-  live: "#",
-  category: "fullstack",
-  featured: true,
-},
+    {
+    id: "1",
+    // TODO: replace the title, description, tech list and github link with your real project details
+    title: ".NET Backend Project",
+    description:
+      "A backend application built with C# and .NET, expanding my stack beyond the JavaScript ecosystem. It focuses on clean, strongly typed code, a well-structured project layout, and building reliable APIs that can pair with my Next.js and React frontends.",
+    image: "/projects/dotnet-project.jpg",
+    tech: ["C#", ".NET", "REST APIs"],
+    category: "backend",
+    featured: false,
+  },
   {
     id: "2",
-    title: "RetailPOS — Full-Stack Point of Sale System",
+    title: "AI Content Studio — AI SaaS Platform",
     description:
-      "A modern full-stack POS and inventory management system built with Next.js 16, TypeScript, MongoDB, Tailwind CSS, NextAuth, Zustand, and TanStack Table. Includes role-based authentication, sales dashboard, barcode scanning, thermal receipt printing, inventory tracking, reporting, and offline-ready PWA support.",
+      "An AI content generation platform for blog posts, emails, code snippets, and image prompts, powered by the OpenAI API. Includes authentication, user management, profile settings, and role-based access control. The responsive dashboard offers usage analytics, searchable content history with pagination and filtering, and dark/light themes.",
+    image: "/projects/ai-content-studio.jpg",
+    tech: ["Next.js", "TypeScript", "MongoDB", "OpenAI API", "NextAuth", "Tailwind CSS"],
+    github: "https://github.com/raselcsedev/ai-content-studio",
+    category: "fullstack",
+    featured: true,
+  },
+  {
+    id: "3",
+    title: "RetailPOS — Point of Sale & Inventory System",
+    description:
+      "A full-stack point-of-sale and inventory management application with product management, barcode generation, inventory tracking, and sales processing. Features authentication, role-based access control, and customer, supplier, purchase, and employee modules, plus dashboard analytics, checkout workflows, reporting, thermal receipt printing, barcode scanning, and Progressive Web App (PWA) support.",
     image: "/projects/retail-pos.jpg",
-    tech: [
-      "Next.js 16",
-      "TypeScript",
-      "MongoDB",
-      "Mongoose",
-      "Tailwind CSS",
-      "NextAuth",
-      "Zustand",
-      "React Hook Form",
-      "Zod",
-      "TanStack Table",
-      "Recharts",
-    ],
+    tech: ["Next.js", "TypeScript", "MongoDB", "Mongoose", "NextAuth", "Tailwind CSS"],
     github: "https://github.com/raselcsedev/retail-pos",
     live: "https://jovial-sable-2db9bd.netlify.app/",
     category: "fullstack",
     featured: true,
   },
   {
-    id: "3",
+    id: "4",
+    title: "Bizpost AI — AI Social Media Content Platform",
+    description:
+      "An AI-powered social media content generation platform for creating Facebook, TikTok, and LinkedIn content. Built with Next.js and TypeScript at Digital Intelligence System Ltd. as part of my frontend work.",
+    image: "/projects/bizpost-ai.jpg",
+        tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+    ],
+    // Company project: no public repo or demo link.
+    category: "frontend",
+    featured: true,
+  },
+  {
+    id: "5",
+    title: "Base ERP & Hatil ERP — Enterprise ERP Systems",
+    description:
+      "Enterprise ERP applications covering Sales, Purchase, and Inventory workflows such as Sales Bills, Warehouse Bills, Repair Service, Dealer Money Receipts, Raw Material Purchases, and Finished Goods Receipts. I also migrated legacy React, AngularJS, and ASP.NET WebForms pages to Angular 17+ standalone components, and built a reusable, configurable data-table component for data-heavy screens.",
+    image: "/projects/erp.jpg",
+    tech: ["Angular", "TypeScript", "RxJS", "Tailwind CSS", "TanStack Query"],
+    // Company project: no public repo or demo link.
+    category: "dashboard",
+    featured: true,
+  },
+  {
+    id: "6",
+    title: "Quick eCommerce & Retail Master",
+    description:
+      "Multi-vendor (Quick eCommerce) and single-vendor (Retail Master) eCommerce platforms with 10+ industry-specific storefront themes (grocery, medicine, furniture, footwear, watches, lifestyle) and dynamic theming. Includes bKash and SSLCommerz payment gateways, guest checkout, cash-on-delivery, multilingual support with next-intl, and multi-currency.",
+    image: "/projects/ecommerce-platforms.jpg",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack Query", "next-intl"],
+    // Company project: no public repo or demo link.
+    category: "frontend",
+    featured: true,
+  },
+  {
+    id: "8",
     title: "Mohona Tours and Travels",
     description:
       "A responsive travel agency website built with React and Tailwind CSS. Includes featured packages, travel destinations, and a travel blog for tips and recommendations.",
@@ -144,10 +187,10 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "4",
+    id: "9",
     title: "Easy Life Shopping",
     description:
-      "An e-commerce shopping website with dynamic category-based filtering, responsive UI components, and advanced product navigation for a seamless customer experience.",
+      "A responsive eCommerce application with dynamic category-based product filtering and reusable UI components for a smooth shopping experience.",
     image: "/projects/ecommerce-site.jpg",
     tech: ["React.js", "Redux Toolkit", "Tailwind CSS"],
     github: "https://github.com/raselcsedev/EasyLife-Shopping",
@@ -156,7 +199,7 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    id: "5",
+    id: "10",
     title: "Music Master",
     description:
       "A responsive music application frontend template developed with Next.js, TypeScript, and Aceternity UI for a polished, user-friendly listening experience.",
@@ -168,7 +211,7 @@ export const PROJECTS: Project[] = [
     featured: false,
   },
   {
-    id: "6",
+    id: "11",
     title: "Innovative Gadgets",
     description:
       "An e-commerce website template built with React and Redux Toolkit, focusing on responsive design, type safety, and reusable UI components.",
@@ -180,7 +223,7 @@ export const PROJECTS: Project[] = [
     featured: false,
   },
   {
-  id: "7",
+  id: "12",
   title: "Ride Vibe",
   description:
     "RideVibe is a modern car rental platform designed to provide a seamless vehicle booking experience for customers and a powerful management system for administrators. From vehicle discovery and online reservations to secure payments and booking management, RideVibe delivers a fast, scalable, and user-friendly rental experience.",
@@ -200,36 +243,7 @@ export const PROJECTS: Project[] = [
   category: "fullstack",
   featured: true,
 },
-  {
-    id: "8",
-    title: "Bizpost AI — AI Social Media Content Platform",
-    description:
-      "An AI-powered social media platform that generates posts, images, and videos from a single prompt. Supports multiple languages and themes, ships optimized templates for Facebook, TikTok, and LinkedIn, and lets users schedule posts from one dashboard. Built at Digital Intelligence System Ltd. as the frontend developer, focusing on reusable components, form validation, and fast data fetching.",
-    image: "/projects/bizpost-ai.jpg",
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "ShadCN UI",
-      "TanStack Query",
-      "React Hook Form",
-      "Zod",
-    ],
-    // Company project: no public repo or demo link. Add `live` here if one becomes public.
-    category: "frontend",
-    featured: true,
-  },
-  {
-    id: "9",
-    // TODO: replace the title, description, tech list and github link with your real project details
-    title: ".NET Backend Project",
-    description:
-      "A backend application built with C# and .NET, expanding my stack beyond the JavaScript ecosystem. It focuses on clean, strongly typed code, a well-structured project layout, and building reliable APIs that can pair with my Next.js and React frontends.",
-    image: "/projects/dotnet-project.jpg",
-    tech: ["C#", ".NET", "REST APIs"],
-    category: "backend",
-    featured: false,
-  },
+
 ];
 
 export const EXPERIENCE: Experience[] = [
@@ -238,28 +252,28 @@ export const EXPERIENCE: Experience[] = [
     company: "Digital Intelligence System Ltd.",
     role: "Frontend Developer",
     duration: "Nov 2023 – Present",
+    location: "Dhaka, Bangladesh",
     description: [
-      "Developing Retails Master — a fully customizable single-vendor e-commerce platform with multi-language, multi-theme support, AI-powered product description generation, product management, order tracking, and integrated payment gateways including Stripe, bKash, Nagad, and SSLCommerz.",
-      "Building Bizpost AI — an AI-powered social media content generation platform supporting multi-language and multi-theme, with AI-driven video generation, image generation, and content generation, featuring optimized templates for Facebook, TikTok, and LinkedIn to help users create and schedule posts efficiently.",
-      "Maintaining Quick eCommerce — a large-scale multivendor platform with multi-language, multi-theme support, AI-powered product description generation, dedicated admin and seller dashboards, real-time live chat via Pusher, push notifications with Firebase, and multi-payment gateway support including Stripe, bKash, Nagad, and SSLCommerz.",
-      "Built responsive ERP dashboards with React.js, Angular, Bootstrap, Tailwind CSS, and SCSS featuring complex data tables, dynamic charts, and role-based access control — optimized with TanStack Query, code splitting, lazy loading, memoization, React Hook Form, and Zod.",
+      "Build and maintain enterprise ERP applications (Base ERP, Hatil ERP) using Angular, TypeScript, RxJS, Tailwind CSS, and TanStack Query.",
+      "Delivered frontend workflows across Sales, Purchase, and Inventory modules, including Sales Bills, Warehouse Bills, Repair Service, Dealer Money Receipts, Raw Material Purchases, and Finished Goods Receipts.",
+      "Migrated legacy React, AngularJS, and ASP.NET WebForms pages to Angular 17+ standalone components across sales, inventory, procurement, HR, and admin modules.",
+      "Integrated backend REST APIs and developed reusable, responsive UI components, including a configurable data-table component, for data-heavy enterprise workflows.",
+      "Develop multi-vendor and single-vendor eCommerce platforms (Quick eCommerce, Retail Master) using Next.js, TypeScript, Tailwind CSS, and TanStack Query.",
+      "Built and maintain 10+ industry-specific storefront themes (grocery, medicine, furniture, footwear, watches, lifestyle) with dynamic theming.",
+      "Integrated bKash and SSLCommerz payment gateways and implemented guest checkout, cash-on-delivery, multilingual (next-intl), and multi-currency functionality.",
+      "Developed Bizpost AI, an AI-powered social media content generation platform (Next.js, TypeScript) for creating Facebook, TikTok, and LinkedIn content.",
     ],
     tech: [
-      "Next.js",
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "ShadCN UI",
-      "React Hook Form",
-      "Zod",
-      "TanStack Query",
       "Angular",
-      "Stripe",
+      "Next.js",
+      "TypeScript",
+      "RxJS",
+      "Tailwind CSS",
+      "TanStack Query",
+      "REST APIs",
+      "next-intl",
       "bKash",
-      "Nagad",
       "SSLCommerz",
-      "Pusher",
-      "Firebase",
     ],
     type: "full-time",
   },
@@ -268,98 +282,76 @@ export const EXPERIENCE: Experience[] = [
     company: "Gain Solutions Ltd.",
     role: "JavaScript Developer",
     duration: "Sep 2022 – Oct 2023",
+    location: "Dhaka, Bangladesh",
     description: [
-      "Developed key features for the House Rental Management System (Unite Living) using React.js, GraphQL, and Apollo Client.",
-      "Implemented efficient CRUD operations with GraphQL APIs.",
-      "Delivered scalable UI components in an Agile environment.",
+      "Developed frontend features for Unite Living, a house rental management system, using React.js, GraphQL, and Apollo Client.",
+      "Implemented CRUD functionality and integrated GraphQL APIs for application data management.",
+      "Built reusable, maintainable UI components that improved interface consistency across the application.",
+      "Collaborated with cross-functional team members in an Agile environment to deliver production-ready features.",
     ],
-    tech: [
-      "React.js",
-      "GraphQL",
-      "Apollo Client",
-      "REST APIs",
-      "CSS3",
-      "SASS",
-      "Bootstrap",
-    ],
+    tech: ["React.js", "GraphQL", "Apollo Client", "JavaScript"],
     type: "full-time",
+  },
+];
+
+export const EDUCATION: Education[] = [
+  {
+    id: "1",
+    degree: "B.Sc. in Computer Science and Engineering",
+    institution: "University of South Asia",
+    duration: "May 2017 – Apr 2021",
+    location: "Dhaka, Bangladesh",
   },
 ];
 
 export const SERVICES: Service[] = [
   {
     id: "1",
-    title: "Full Stack Development",
-    description:
-      "End-to-end web application development from database design to polished UI. Scalable architecture, clean code, and production deployment.",
-    icon: "layers",
-  },
-  {
-    id: "2",
     title: "Frontend Development",
     description:
-      "Pixel-perfect, responsive interfaces using Next.js and React. Optimized for performance, accessibility, and exceptional user experience.",
+      "Pixel-perfect, responsive interfaces with Next.js, React.js, and Angular. Reusable component architecture, clean state management, and cross-browser compatibility.",
     icon: "monitor",
   },
   {
-    id: "3",
-    title: "Backend API Development",
+    id: "2",
+    title: "ERP & Dashboard Development",
     description:
-      "Robust RESTful APIs with Express.js and MongoDB. Authentication, rate limiting, caching, and comprehensive error handling.",
-    icon: "server",
-  },
-  {
-    id: "4",
-    title: "Dashboard Development",
-    description:
-      "Data-rich admin dashboards with real-time charts, role-based access control, and complex data tables for business intelligence.",
+      "Data-heavy enterprise interfaces with configurable data tables, role-based screens, and workflows for sales, purchase, inventory, HR, and admin modules.",
     icon: "layout-dashboard",
   },
   {
-    id: "5",
+    id: "3",
     title: "E-Commerce Development",
     description:
-      "Complete e-commerce systems with inventory management, payment gateway integration, order tracking, and multi-vendor support.",
+      "Single-vendor and multi-vendor storefronts with dynamic themes, guest checkout, multilingual and multi-currency support, and bKash / SSLCommerz payments.",
     icon: "shopping-cart",
   },
   {
-    id: "6",
-    title: "Website Optimization",
+    id: "4",
+    title: "AI-Powered Web Apps",
     description:
-      "Performance audits and optimization for Core Web Vitals, SEO improvements, image optimization, and load time reduction.",
+      "Frontends for AI products such as content generation tools, built with the OpenAI API, authentication, usage analytics, and content history.",
     icon: "zap",
+  },
+  {
+    id: "5",
+    title: "API Integration",
+    description:
+      "Reliable integration of REST and GraphQL APIs with TanStack Query and Apollo Client, plus light backend work with Node.js, Express.js, MongoDB, and ASP.NET Core Web API.",
+    icon: "server",
+  },
+  {
+    id: "6",
+    title: "Legacy Migration & Modernization",
+    description:
+      "Moving legacy React, AngularJS, and ASP.NET WebForms pages to modern Angular 17+ standalone components without disrupting existing workflows.",
+    icon: "layers",
   },
 ];
 
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: "1",
-    name: "Sarah Mitchell",
-    role: "CTO, RetailEdge",
-    content:
-      "Rasel delivered our e-commerce platform 2 weeks early with zero critical bugs. The code quality was exceptional — clean, well-documented, and easy for our team to maintain.",
-    avatar: "/avatars/sarah.jpg",
-    rating: 5,
-  },
-  {
-    id: "2",
-    name: "James Okonkwo",
-    role: "Founder, FoodDash",
-    content:
-      "Our delivery app needed to handle real-time updates for 500+ concurrent orders. Rasel's WebSocket architecture handled it flawlessly. Absolutely brilliant developer.",
-    avatar: "/avatars/james.jpg",
-    rating: 5,
-  },
-  {
-    id: "3",
-    name: "Priya Sharma",
-    role: "Product Manager, SaaSify",
-    content:
-      "Working with Rasel on our multi-vendor dashboard was a pleasure. He asked the right questions upfront, maintained clear communication, and delivered beyond expectations.",
-    avatar: "/avatars/priya.jpg",
-    rating: 5,
-  },
-];
+// Testimonials are intentionally not shown on the site (see app/page.tsx).
+// Add real ones here and re-enable the section when you have them.
+export const TESTIMONIALS: Testimonial[] = [];
 
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
@@ -367,6 +359,5 @@ export const NAV_LINKS = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#services", label: "Services" },
-  { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ];
