@@ -33,24 +33,28 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </span>
         </div>
         <div className="absolute inset-0 bg-[rgb(var(--accent)/0.08)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="w-10 h-10 rounded-full card-glass flex items-center justify-center text-[rgb(var(--text-primary))] hover:scale-110 transition-transform"
-            aria-label={`View ${project.title} on GitHub`}
-          >
-            <Github className="w-4 h-4" />
-          </a>
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-            className="w-10 h-10 rounded-full accent-bg flex items-center justify-center text-white hover:scale-110 transition-transform"
-            aria-label={`View ${project.title} live demo`}
-          >
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-full card-glass flex items-center justify-center text-[rgb(var(--text-primary))] hover:scale-110 transition-transform"
+              aria-label={`View ${project.title} on GitHub`}
+            >
+              <Github className="w-4 h-4" />
+            </a>
+          )}
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-full accent-bg flex items-center justify-center text-white hover:scale-110 transition-transform"
+              aria-label={`View ${project.title} live demo`}
+            >
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          )}
         </div>
       </div>
 
@@ -75,22 +79,30 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           )}
         </div>
         <div className="flex items-center gap-4 pt-4 border-t border-[rgb(var(--border-subtle))]">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1.5 text-xs text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] transition-colors"
-          >
-            <Github className="w-3.5 h-3.5" /> Code
-          </a>
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1.5 text-xs text-[rgb(var(--accent))] hover:opacity-80 transition-opacity"
-          >
-            <ExternalLink className="w-3.5 h-3.5" /> Live Demo
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 text-xs text-[rgb(var(--text-muted))] hover:text-[rgb(var(--text-primary))] transition-colors"
+            >
+              <Github className="w-3.5 h-3.5" /> Code
+            </a>
+          )}
+          {project.live && project.live !== "#" ? (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 text-xs text-[rgb(var(--accent))] hover:opacity-80 transition-opacity"
+            >
+              <ExternalLink className="w-3.5 h-3.5" /> Live Demo
+            </a>
+          ) : (
+            !project.github && (
+              <span className="text-xs text-[rgb(var(--text-muted))]">Private / company project</span>
+            )
+          )}
         </div>
       </div>
     </motion.article>

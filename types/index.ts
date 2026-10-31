@@ -17,8 +17,8 @@ export interface Project {
   description: string;
   image: string;
   tech: string[];
-  github: string;
-  live: string;
+  github?: string; // optional: private/company projects have no public repo
+  live?: string;   // optional: omit when there is no live demo
   category: "fullstack" | "frontend" | "backend" | "mobile" | "dashboard";
   featured: boolean;
 }

@@ -44,19 +44,29 @@ export function ContactSection() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS env vars are missing. See .env.example");
+      alert(`Contact form is not configured yet. Please email me at ${PERSONAL_INFO.email}`);
+      return;
+    }
+
     try {
       setIsLoading(true);
 
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        serviceId,
+        templateId,
         {
           from_name: data.name,
           from_email: data.email,
           subject: data.subject,
           message: data.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        publicKey
       );
 
       setIsSubmitted(true);

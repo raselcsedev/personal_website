@@ -24,6 +24,11 @@ export const SKILLS: Skill[] = [
       { name: "ShadCN UI", level: 88, icon: "🧩" },
       { name: "React Hook Form", level: 90, icon: "📝" },
       { name: "TanStack Query", level: 90, icon: "🔗" },
+      { name: "Redux Toolkit", level: 88, icon: "🔄" },
+      { name: "Zustand", level: 85, icon: "🐻" },
+      { name: "Zod", level: 88, icon: "🛡️" },
+      { name: "Angular", level: 78, icon: "🅰️" },
+      { name: "GraphQL / Apollo", level: 82, icon: "◼️" },
     ],
   },
   {
@@ -31,9 +36,8 @@ export const SKILLS: Skill[] = [
     items: [
       { name: "HTML5", level: 95, icon: "📄" },
       { name: "CSS3", level: 92, icon: "🎨" },
-      { name: "Tailwind CSS", level: 94, icon: "💨" },
-      { name: "Shadcn/UI", level: 90, icon: "🧩" },
-      { name: "SASS", level: 85, icon: "🎛️" },
+      { name: "SASS / SCSS", level: 85, icon: "🎛️" },
+      { name: "Framer Motion", level: 85, icon: "🎞️" },
       { name: "Bootstrap", level: 82, icon: "🅱️" },
       { name: "Aceternity UI", level: 80, icon: "✨" },
     ],
@@ -47,9 +51,28 @@ export const SKILLS: Skill[] = [
       { name: "REST APIs", level: 92, icon: "🔌" },
       { name: "Authentication", level: 88, icon: "🔒" },
       { name: "Payment Gateway", level: 82, icon: "💳" },
+      { name: "NextAuth.js", level: 85, icon: "🔑" },
+      { name: "Firebase / Pusher", level: 80, icon: "🔔" },
     ],
   },
 
+  {
+    category: "Programming Languages",
+    items: [
+      { name: "JavaScript", level: 94, icon: "🟨" },
+      { name: "TypeScript", level: 92, icon: "🔷" },
+      { name: "HTML5 / CSS3", level: 95, icon: "📄" },
+      { name: "SQL / NoSQL queries", level: 78, icon: "🗄️" },
+    ],
+  },
+  {
+    category: "Spoken Languages",
+    items: [
+      // TODO: adjust these levels to match your real proficiency
+      { name: "Bengali (Native)", level: 100, icon: "🇧🇩" },
+      { name: "English (Professional)", level: 80, icon: "🇬🇧" },
+    ],
+  },
   {
     category: "Tools",
     items: [
@@ -57,7 +80,7 @@ export const SKILLS: Skill[] = [
       { name: "GitHub", level: 90, icon: "🐙" },
       { name: "VS Code", level: 95, icon: "💻" },
       { name: "Postman", level: 88, icon: "📬" },
-      { name: "Vercel", level: 85, icon: "☁️" },
+      { name: "Vercel / Netlify", level: 85, icon: "☁️" },
     ],
   },
 ];
@@ -175,6 +198,25 @@ export const PROJECTS: Project[] = [
   category: "fullstack",
   featured: true,
 },
+  {
+    id: "8",
+    title: "Bizpost AI — AI Social Media Content Platform",
+    description:
+      "An AI-powered social media platform that generates posts, images, and videos from a single prompt. Supports multiple languages and themes, ships optimized templates for Facebook, TikTok, and LinkedIn, and lets users schedule posts from one dashboard. Built at Digital Intelligence System Ltd. as the frontend developer, focusing on reusable components, form validation, and fast data fetching.",
+    image: "/projects/bizpost-ai.jpg",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+    ],
+    // Company project: no public repo or demo link. Add `live` here if one becomes public.
+    category: "frontend",
+    featured: true,
+  },
 ];
 
 export const EXPERIENCE: Experience[] = [

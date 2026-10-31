@@ -8,6 +8,7 @@ const HIGHLIGHTS = [
   "3+ years of professional full-stack experience",
   "20+ production projects shipped",
   "Expert in Next.js App Router & React ecosystem",
+  "Built AI-powered products: content generation, image & video tools",
   "Strong Node.js API and MongoDB architecture skills",
   "Experienced with payment systems: Stripe, PayPal, SSLCommerz",
   "Angular frontend development & enterprise applications",
@@ -88,7 +89,7 @@ export function AboutSection() {
                   className="flex items-start gap-3 w-full min-w-0"
                 >
                   <CheckCircle2 className="w-4 h-4 text-[rgb(var(--accent))] shrink-0 mt-0.5" />
-                  <span className="text-sm text-[rgb(var(--text-secondary))] leading-relaxed break-all overflow-wrap-anywhere max-w-full">{h}</span>
+                  <span className="text-sm text-[rgb(var(--text-secondary))] leading-relaxed break-words max-w-full">{h}</span>
                 </motion.div>
               ))}
             </div>

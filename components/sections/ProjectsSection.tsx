@@ -7,8 +7,12 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 
-const FILTERS = ["all", "fullstack", "frontend", "dashboard", "mobile"] as const;
-type Filter = (typeof FILTERS)[number];
+// Only show filter tabs for categories that actually have projects (no empty tabs)
+const FILTERS: string[] = [
+  "all",
+  ...Array.from(new Set(PROJECTS.map((p) => p.category))),
+];
+type Filter = string;
 
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState<Filter>("all");
