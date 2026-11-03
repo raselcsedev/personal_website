@@ -93,7 +93,7 @@ export function HeroSection() {
               <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-glow" />
               Available for work
             </span>
-            <span className="soft-pill">Next.js · React · Angular · Tailwind</span>
+            <span className="soft-pill">React.js · Next.js · Angular · Typescript . Tailwind CSS</span>
             {/* <span className="soft-pill">UI/UX Focused</span> */}
           </motion.div>
 

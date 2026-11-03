@@ -100,9 +100,55 @@ export const SKILLS: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: "12",
+    slug: "careercraft-cv-portfolio-platform",
+    title: "CareerCraft — CV Builder & Portfolio Platform",
+    description:
+      "A full-stack SaaS platform that helps professionals and students build professional CVs, import existing resumes from PDF or DOCX files, export print-ready PDFs, and publish personal portfolio websites with unique public URLs. Includes secure authentication, reusable profile management, customizable templates, and an admin dashboard.",
+    overview:
+      "CareerCraft is a full-stack CV builder and portfolio platform built with Next.js and NestJS. Users can create and customize CVs, import existing resumes, export print-ready A4 PDFs, and publish personal portfolio websites using unique URLs. The platform includes JWT-based authentication with HTTP-only cookies, profile management, project management, template customization, and role-based admin functionality. Prisma ORM and TiDB Cloud provide database access and persistent storage.",
+    role: "Full-Stack Developer",
+    projectType: "personal",
+    features: [
+      "CV builder with 6 customizable professional templates",
+      "Import existing CVs from PDF and DOCX files with automatic parsing",
+      "Export CVs as print-ready A4 PDFs",
+      "Live CV preview with customizable colors, fonts, spacing, and section ordering",
+      "Personal portfolio builder with 6 portfolio templates",
+      "Publish and unpublish portfolios with unique public URLs",
+      "Portfolio project management with technology tags, featured projects, and live links",
+      "Secure authentication using JWT, HTTP-only cookies, and bcrypt password hashing",
+      "Reusable profile management with automatic CV and portfolio data population",
+      "Dashboard with CV, portfolio, and profile management",
+      "Role-based access control with an admin dashboard for system statistics and template management",
+      "REST API documentation with Swagger and automated unit testing",
+      "Responsive UI with dark and light themes",
+    ],
+    image: "/projects/careercraft.jpg",
+    tech: [
+      "Next.js 14",
+      "TypeScript",
+      "NestJS",
+      "Prisma ORM",
+      "TiDB Cloud",
+      "MySQL",
+      "JWT",
+      "Passport.js",
+      "Tailwind CSS",
+      "Jest",
+      "Swagger",
+      "Vercel",
+      "Render",
+    ],
+    github: "https://github.com/raselcsedev/career-craft",
+    live: "https://career-craft-amber.vercel.app/",
+    category: "fullstack",
+    featured: true,
+  },
+  {
     id: "11",
     slug: "dotnet-backend-project",
-    title: ".NET Backend Project",
+    title: "Product Manager (.NET Backend Project)",
     description:
       "A backend application built with C# and .NET, expanding my stack beyond the JavaScript ecosystem. It focuses on clean, strongly typed code, a well-structured project layout, and building reliable APIs that can pair with my Next.js and React frontends.",
     overview:

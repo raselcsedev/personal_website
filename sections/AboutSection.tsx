@@ -70,7 +70,7 @@ export function AboutSection() {
             <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-6 max-w-full overflow-wrap-anywhere">
               I&apos;m a <strong className="text-[rgb(var(--text-primary))]">Frontend Developer</strong> with
               4 years of professional experience building production web applications that scale. My core stack is{" "}
-              <strong className="text-[rgb(var(--text-primary))]">Next.js + React.js + Angular + Tailwind CSS</strong>, and I&apos;ve
+              <strong className="text-[rgb(var(--text-primary))]">React.js + Next.js + Angular + Typescript + Tailwind CSS</strong>, and I&apos;ve
               shipped enterprise ERP systems, multi-vendor eCommerce platforms, and AI-powered products.
             </p>
             <p className="text-[rgb(var(--text-secondary))] leading-relaxed mb-8 max-w-full overflow-wrap-anywhere">
